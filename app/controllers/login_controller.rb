@@ -1,5 +1,5 @@
 class LoginController < ApplicationController
   def login
-    attr_accessor
+    #attr_accessor
   end
 end
