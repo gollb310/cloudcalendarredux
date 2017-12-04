@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../calendar/.idea/calendar.iml" filepath="$PROJECT_DIR$/../calendar/.idea/calendar.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/cloudcalendarredux.iml" filepath="$PROJECT_DIR$/.idea/cloudcalendarredux.iml" />
     </modules>
   </component>
