@@ -19,4 +19,15 @@
 //= require moment 
 //= require fullcalendar
 
-$('#calendar').fullCalendar({});
+$(document).ready(function() {
+
+  $('#calendar').fullCalendar({
+  
+    header: {
+        left: 'title',
+        center: '',
+        right: 'today prev,next'
+    }
+  });
+});
+
