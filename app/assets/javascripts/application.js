@@ -20,9 +20,8 @@
 //= require fullcalendar
 
 $(document).ready(function() {
-
   $('#calendar').fullCalendar({
-  
+    timezone: 'local',
     header: {
         left: 'title',
         center: '',
