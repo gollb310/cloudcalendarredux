@@ -9,7 +9,8 @@ Rails.application.routes.draw do
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
-
+  get   '/create_event', to: 'event#new'
+  post  '/create_event', to: 'event#create'
 
   resources :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

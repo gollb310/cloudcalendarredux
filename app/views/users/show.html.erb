@@ -13,4 +13,5 @@
     </section>
   </aside>
 </div>
-<div id="calendar"></div>
+<div>  <%= link_to "Create event", '/create_event', class: "btn btn-lg btn-primary" %></div>
+<div id="calendar" data-eventsfiltered="<%= @eventsfiltered %>"></div>

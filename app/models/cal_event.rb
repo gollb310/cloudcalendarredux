@@ -1,9 +1,7 @@
 class CalEvent < ApplicationRecord
-  attr_accessor :title, :start, :end
 
-  def initialize(attributes = {})
-    @title  = attributes[:title]
-    @start = attributes[:start]
-    @end = attributes[:end]
-  end
+  validates :title, presence: true
+  validates :start, presence: true
+  validates :end, presence: true
+
 end

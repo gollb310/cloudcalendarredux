@@ -26,7 +26,18 @@ $(document).ready(function() {
         left: 'title',
         center: '',
         right: 'today prev,next'
-    }
+    },
+    var: eventsfiltered = fullCalendar.data('eventsfiltered'),
+
+    events: [
+        $.each(eventsfiltered,{
+            title: eventsfiltered.title,
+            description: eventsfiltered.description,
+            start: eventsfiltered.start,
+            end: eventsfiltered.end
+
+    })
+    ]
   });
 });
 

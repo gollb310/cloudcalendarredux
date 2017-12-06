@@ -7,7 +7,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       log_in @user
-      flash.now[:success] = "Welcome to the Cloud Calendar!"
+      flash[:success] = "Welcome to the Cloud Calendar!"
       redirect_to @user
     else
       render 'new'
@@ -16,6 +16,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @eventsfiltered = CalEvent.where(userid: params[@user.id])
   end
 
   private
