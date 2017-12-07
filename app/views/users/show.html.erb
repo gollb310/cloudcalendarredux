@@ -2,7 +2,7 @@
 <head>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.7.0/fullcalendar.min.css' />
 </head>
-
+<body onload="getVals(@titles, @desc, @start, @end)">
 <div class="row">
   <aside class="col-md-4">
     <section class="user_info">
@@ -13,5 +13,7 @@
     </section>
   </aside>
 </div>
-<div>  <%= link_to "Create event", '/create_event', class: "btn btn-lg btn-primary" %></div>
-<div id="calendar" data-eventsfiltered="<%= @eventsfiltered %>"></div>
+<div><%= link_to "Create event", '/create_event', class: "btn btn-lg btn-primary" %></div>
+
+<div id="calendar"></div>
+</body>

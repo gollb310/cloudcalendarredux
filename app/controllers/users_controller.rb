@@ -16,7 +16,22 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @eventsfiltered = CalEvent.where(userid: params[@user.id])
+    @eventsfiltered = CalEvent.all
+    @eventlist = []
+    @title = []
+    @desc = []
+    @start = []
+    @end = []
+    for x in @eventsfiltered do
+      if x.userid==@user.id
+        @title.push( x.title)
+        @desc.push(x.description)
+        @start.push(x.start)
+        @end.push(x.end)
+      end
+
+    end
+
   end
 
   private

@@ -19,25 +19,50 @@
 //= require moment 
 //= require fullcalendar
 
+
+let newevent = [];
+let eventsarray = [];
+let formattedEventData = [];
+
+function getVals(titles, desc, starts, ends){
+    console.log(titles.toString());
+    $.each(titles, function (index, value){
+
+
+        newevent.push = titles[index],
+        newevent.push = desc[index],
+        newevent.push = starts[index],
+        newevent.push = ends[index],
+        eventsarray.push(newevent)
+    });
+
+
+
+    for (var k = 0; k < eventsArray.length; k++) {
+        formattedEventData.push({
+            title: eventsArray[k][0],
+            description: eventsArray[k][1],
+            start: eventsarray[k][2],
+            end: eventsarray[k][3]
+        });
+    }
+}
+
 $(document).ready(function() {
-  $('#calendar').fullCalendar({
-    timezone: 'local',
-    header: {
-        left: 'title',
-        center: '',
-        right: 'today prev,next'
-    },
-    var: eventsfiltered = fullCalendar.data('eventsfiltered'),
+    $('#calendar').fullCalendar({
 
-    events: [
-        $.each(eventsfiltered,{
-            title: eventsfiltered.title,
-            description: eventsfiltered.description,
-            start: eventsfiltered.start,
-            end: eventsfiltered.end
 
-    })
-    ]
-  });
+        timezone: 'local',
+
+        header: {
+            left: 'title',
+            center: '',
+            right: 'today prev,next'
+        },
+
+        eventSources: [{url: '/public/events.json'}]
+
+
+    });
+
 });
-

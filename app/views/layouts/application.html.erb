@@ -5,13 +5,12 @@
   <%= csrf_meta_tags %>
   <%= stylesheet_link_tag    'application', media: 'all',
                              'data-turbolinks-track': 'reload' %>
-  <link rel='stylesheet' type="text/css" src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.7.0/fullcalendar.min.css"/>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   <!--[if lt IE 9]>
   <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
+
   </script>
-  <script src="{% static 'HealthNet/moment.min.js' %}"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.7.0/fullcalendar.min.js"></script>
   <![endif]-->
   <%= render 'layouts/shim' %>
 </head>
@@ -25,6 +24,6 @@
   <%= yield %>
 </div>
 <%= render 'layouts/footer' %>
-<%= debug(params) if Rails.env.development? %>
+<!---<%= debug(params) if Rails.env.development? %>--->
 </body>
 </html>
