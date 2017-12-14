@@ -40,6 +40,7 @@ gem 'bootstrap-sass', '3.3.7'
 
 gem 'jquery-rails'
 
+gem 'unicorn'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
