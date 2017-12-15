@@ -1,24 +1,28 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Setup
+Before running the app you need to install the required gems
+  bundle install
 
-Things you may want to cover:
+To run the application, you must have postgresql installed.
 
-* Ruby version
+If you used Homebrew to install postgresql, you must create your own postges role.
 
-* System dependencies
+How to create postgres role:
+In your terminal enter this command
+  createuser --interactive postgres
 
-* Configuration
+When asked if you want postgres to be a superuser, respond "y"
 
-* Database creation
+Check to see if your new role was added:
+  psql -d postgres
+  In the shell type '\du' and postgre should be listed under roles
+  Type '\q' to exit shell
 
-* Database initialization
+## Create Database
+Now that you have postgresql ready to go, you can now create the databases:
+  rake db:setup
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Run App
+Use "rails server" or "bin/rails server" to start the rails server
+The app will be available in your brower at the address http://localhost:3000
